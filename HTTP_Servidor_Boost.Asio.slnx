@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="HTTP_Servidor_Boost.Asio/HTTP_Servidor_Boost.Asio.vcxproj" Id="976ce159-4de2-410d-b2e5-51ac7b2a8c30" />
+</Solution>
