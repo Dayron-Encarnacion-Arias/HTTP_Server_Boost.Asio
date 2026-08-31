@@ -1,72 +1,123 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
+# ------------------------------------------------------------
+# Build output
+# ------------------------------------------------------------
 build/
 Build/
 build-*/
+out/
+bin/
+obj/
+x64/
+x86/
+Win32/
+Debug/
+Release/
+RelWithDebInfo/
+MinSizeRel/
+**/x64/
+**/x86/
+**/Win32/
+HTTP_Ser.*/
+**/HTTP_Ser.*/
 
+# ------------------------------------------------------------
+# Visual Studio
+# ------------------------------------------------------------
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.opendb
+ipch/
+
+# MSVC intermediate and binary files
+*.obj
+*.iobj
+*.ipdb
+*.idb
+*.pch
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+*.tlog
+*.lastbuildstate
+*.recipe
+*.appxrecipe
+*.res
+*.manifest
+*.cache
+*.log
+
+# ------------------------------------------------------------
+# Other C/C++ compiler output
+# ------------------------------------------------------------
+*.d
+*.o
+*.lo
+*.slo
+*.a
+*.so
+*.so.*
+*.dylib
+*.gch
+*.dwo
+*.out
+*.app
+
+# ------------------------------------------------------------
 # CMake generated files
+# ------------------------------------------------------------
 CMakeFiles/
 CMakeCache.txt
+CMakeUserPresets.json
 cmake_install.cmake
-Makefile
 install_manifest.txt
+CTestTestfile.cmake
+DartConfiguration.tcl
+Makefile
+build.ninja
+rules.ninja
 compile_commands.json
-
-# Temporary files
-*.tmp
-*.log
-*.bak
-*.swp
-
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
 Testing/
+
+# ------------------------------------------------------------
+# vcpkg generated dependencies
+# ------------------------------------------------------------
+vcpkg_installed/
+.vcpkg-root
+
+# ------------------------------------------------------------
+# Test, coverage and analysis output
+# ------------------------------------------------------------
+coverage/
+coverage-*/
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
 .cache/
 
-# Archivos de Visual Studio
-.vs/
+# ------------------------------------------------------------
+# Editors and operating systems
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Public project files intentionally kept:
+# *.slnx, *.vcxproj, *.vcxproj.filters, CMakeLists.txt, vcpkg.json,
+# README.md, docs/, include/, src/, public/ and tests/.
