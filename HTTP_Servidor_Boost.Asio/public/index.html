@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Servidor HTTP/1.1 asíncrono con C++20 y Boost.Asio.">
+    <title>HTTP Server C++ / Boost.Asio</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+</head>
+<body>
+    <header><nav class="shell" aria-label="Navegación principal"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>HTTP.CPP</a><div class="nav-links"><a href="/" aria-current="page">Inicio</a><a href="/about">Arquitectura</a><a href="/api/health">API</a></div></nav></header>
+    <main class="shell">
+        <p class="eyebrow">C++20 · Boost.Asio · HTTP/1.1</p>
+        <h1>Networking,<br>sin <span>atajos.</span></h1>
+        <p class="lead">Un servidor HTTP asíncrono diseñado desde el socket TCP hasta la respuesta: parser propio, routing, archivos estáticos, concurrencia segura y manejo de errores.</p>
+        <div class="status-row">
+            <div class="status-card"><span class="pulse" aria-hidden="true"></span><div><div class="status-label">Servidor</div><div class="status-value" data-health>CHECKING</div></div></div>
+            <div class="status-card"><div><div class="status-label">Endpoint</div><div class="status-value">GET /api/health</div></div></div>
+        </div>
+        <section class="grid" aria-label="Características">
+            <article class="card"><span class="number">01</span><h2>I/O asíncrono</h2><p>Un io_context con workers acotados atiende múltiples clientes sin crear un hilo por conexión.</p></article>
+            <article class="card"><span class="number">02</span><h2>HTTP real</h2><p>Request line, headers, body y Content-Length se validan antes de entrar al router.</p></article>
+            <article class="card"><span class="number">03</span><h2>Defensa básica</h2><p>Timeout, límite de tamaño y contención canónica protegen el servidor de entradas hostiles.</p></article>
+        </section>
+    </main>
+    <footer><div class="shell">Construido con C++ moderno. Sin framework HTTP.</div></footer>
+</body>
+</html>

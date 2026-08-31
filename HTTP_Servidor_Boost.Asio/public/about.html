@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Arquitectura · HTTP Server C++</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+    <header><nav class="shell"><a class="brand" href="/"><span class="brand-mark"></span>HTTP.CPP</a><div class="nav-links"><a href="/">Inicio</a><a href="/about" aria-current="page">Arquitectura</a><a href="/api/health">API</a></div></nav></header>
+    <main class="shell">
+        <p class="eyebrow">Flujo de una solicitud</p><h1>Una ruta.<br><span>Capas claras.</span></h1>
+        <p class="lead">Cada clase posee una responsabilidad pequeña y verificable. Las sesiones comparten el router y conservan su propio socket, buffer, temporizador y strand.</p>
+        <section class="grid">
+            <article class="card"><span class="number">TCP</span><h2>Server → Session</h2><p>async_accept entrega cada socket a una sesión administrada por shared_ptr.</p></article>
+            <article class="card"><span class="number">HTTP</span><h2>Parser → Router</h2><p>Solo una solicitud completa y válida alcanza la resolución de rutas.</p></article>
+            <article class="card"><span class="number">I/O</span><h2>Response → Client</h2><p>La respuesta serializada vive hasta completar async_write.</p></article>
+        </section>
+        <pre class="terminal"><b>Client</b> → TCP Socket → Boost.Asio → Session
+       → HttpRequest → Router → HttpResponse → <b>Client</b></pre>
+    </main>
+    <footer><div class="shell">Diseño orientado a objetos con separación .hpp / .cpp.</div></footer>
+</body>
+</html>
