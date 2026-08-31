@@ -70,6 +70,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+    <VcpkgManifestRoot>$(ProjectDir)</VcpkgManifestRoot>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -138,8 +142,42 @@
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0A00;BOOST_ERROR_CODE_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="src\http_request.cpp" />
+    <ClCompile Include="src\http_response.cpp" />
+    <ClCompile Include="src\logger.cpp" />
+    <ClCompile Include="src\router.cpp" />
+    <ClCompile Include="src\server.cpp" />
+    <ClCompile Include="src\session.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\http_request.hpp" />
+    <ClInclude Include="include\http_response.hpp" />
+    <ClInclude Include="include\logger.hpp" />
+    <ClInclude Include="include\router.hpp" />
+    <ClInclude Include="include\server.hpp" />
+    <ClInclude Include="include\session.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeLists.txt" />
+    <None Include="README.md" />
+    <None Include="vcpkg.json" />
+    <None Include="docs\architecture.md" />
+    <None Include="public\404.html" />
+    <None Include="public\about.html" />
+    <None Include="public\app.js" />
+    <None Include="public\index.html" />
+    <None Include="public\styles.css" />
+    <None Include="tests\test_http_request.cpp" />
+    <None Include="tests\test_http_response.cpp" />
+    <None Include="tests\test_router.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

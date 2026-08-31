@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "http-servidor-boost-asio",
+  "version-string": "1.0.0",
+  "description": "Servidor HTTP/1.1 asincrono en C++20 con Boost.Asio",
+  "dependencies": [
+    "boost-asio",
+    "boost-system",
+    "gtest"
+  ]
+}

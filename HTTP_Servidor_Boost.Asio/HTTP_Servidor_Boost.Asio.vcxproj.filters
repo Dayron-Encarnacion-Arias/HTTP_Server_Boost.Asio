@@ -1,26 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="include">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="lib">
-      <UniqueIdentifier>{58bd911c-5d0c-45c9-81df-10bc94143040}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="bin">
-      <UniqueIdentifier>{6976322f-d5ea-4ef4-a059-286f886c8584}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="logs">
-      <UniqueIdentifier>{a6c431f8-b138-41b4-b7bf-c3ac1d1764ba}</UniqueIdentifier>
     </Filter>
     <Filter Include="docs">
       <UniqueIdentifier>{0dbade8d-9dd9-4f59-ae11-34adcd465489}</UniqueIdentifier>
@@ -34,9 +21,6 @@
     <Filter Include="public">
       <UniqueIdentifier>{62b84fa0-fbbb-4611-bf22-f40c93b39443}</UniqueIdentifier>
     </Filter>
-    <Filter Include="build">
-      <UniqueIdentifier>{7aa8dbde-efd1-479d-a876-eca9239533d4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="public\js">
       <UniqueIdentifier>{051f2662-32d5-4bbb-b46a-9a55ad80483f}</UniqueIdentifier>
     </Filter>
@@ -46,22 +30,92 @@
     <Filter Include="src\logging">
       <UniqueIdentifier>{48d7d1d7-cfce-4325-8e39-8366a583e215}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\utils">
-      <UniqueIdentifier>{167935af-00d9-4ab4-ae64-0b0082c03e87}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\http">
       <UniqueIdentifier>{6f4b6257-358a-46da-a588-ffc7ad06782b}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\network">
       <UniqueIdentifier>{33b65af8-2edf-4910-b50a-9a1cc5aa1d1a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\config">
-      <UniqueIdentifier>{69c28889-1a37-4d9a-8f1e-053ef9abf1d9}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\http_request.cpp">
+      <Filter>src\http</Filter>
+    </ClCompile>
+    <ClCompile Include="src\http_response.cpp">
+      <Filter>src\http</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logger.cpp">
+      <Filter>src\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\router.cpp">
+      <Filter>src\http</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server.cpp">
+      <Filter>src\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\session.cpp">
+      <Filter>src\network</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\http_request.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\http_response.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\logger.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\router.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\session.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeLists.txt">
+      <Filter>config</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="vcpkg.json">
+      <Filter>config</Filter>
+    </None>
+    <None Include="docs\architecture.md">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="public\404.html">
+      <Filter>public</Filter>
+    </None>
+    <None Include="public\about.html">
+      <Filter>public</Filter>
+    </None>
+    <None Include="public\index.html">
+      <Filter>public</Filter>
+    </None>
+    <None Include="public\app.js">
+      <Filter>public\js</Filter>
+    </None>
+    <None Include="public\styles.css">
+      <Filter>public\css</Filter>
+    </None>
+    <None Include="tests\test_http_request.cpp">
+      <Filter>tests</Filter>
+    </None>
+    <None Include="tests\test_http_response.cpp">
+      <Filter>tests</Filter>
+    </None>
+    <None Include="tests\test_router.cpp">
+      <Filter>tests</Filter>
+    </None>
   </ItemGroup>
 </Project>
