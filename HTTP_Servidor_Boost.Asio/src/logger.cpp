@@ -26,4 +26,3 @@ void Logger::write(const std::string_view level, const std::string_view message)
 }
 
 } // namespace http_server
-

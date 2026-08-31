@@ -45,4 +45,3 @@ void Server::accept_next() {
 }
 
 } // namespace http_server
-
